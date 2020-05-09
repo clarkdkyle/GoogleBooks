@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Results from "../components/Results";
-import Jumbotron from "../components/Jumbotron";
+// import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
-import { Link } from "react-router-dom";
-import { Col, Row, Container } from "../components/Grid";
-import { List, ListItem } from "../components/Wrapper";
+// import { Link } from "react-router-dom";
+// import { Col, Row, Container } from "../components/Grid";
+// import { List, ListItem } from "../components/Wrapper";
 import Form from "../components/Form"
 
 class Search extends React.Component {
@@ -29,7 +29,7 @@ class Search extends React.Component {
   }
   // Loads all books and sets them to books
   searchBook = query => {
-    API.getBooks()
+    API.getBook()
       .then(res => this.setState({ books: res.data.items.map(
           bookData => this.makeBook(bookData))
         }))

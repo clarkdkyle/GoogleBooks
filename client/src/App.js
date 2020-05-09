@@ -1,10 +1,11 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import React, { Component } from "react";
+import { BrowserRouter as Router, Route, } from "react-router-dom";
 import NoMatch from "./pages/NoMatch";
 import Search from "./pages/Search";
 import Saved from "./pages/Saved";
-import Nav from "./components/Nav";
-import
+import Nav from "./components/Nav"; 
+import Wrapper from "./components/Wrapper";
+
 
 class App extends Component {
  
@@ -13,7 +14,6 @@ class App extends Component {
       <Router>
         <div>
           <Nav />
-          <Header />
           <Wrapper>
             <Route exact path="/" component={Search} />
             <Route exact path="/search" component={Search} />
